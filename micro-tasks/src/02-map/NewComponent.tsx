@@ -8,6 +8,8 @@ type NewComponentArrayType = {
 }
 export const NewComponent = (props: NewComponentType) => {
 	return (
-		<div>{props.students}</div>
+		<div>{props.students.map((el)=>{
+			return <div>My name is {el.name}. I am {el.age} years old</div>})}
+		</div>
 	);
 }

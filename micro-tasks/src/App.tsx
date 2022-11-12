@@ -3,6 +3,7 @@ import './App.css';
 import {Body} from './01-site/Body';
 import {Header} from "./01-site/Header";
 import {Footer} from "./01-site/Footer";
+import {NewComponent} from "./02-map/NewComponent";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 			<Header title={"Header"}/>
 			<Body title={"Body"}/>
 			<Footer title={"Footer"}/>
+			<NewComponent/>
 		</>
 	);
 }

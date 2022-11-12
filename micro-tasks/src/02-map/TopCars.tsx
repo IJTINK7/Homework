@@ -1,5 +1,12 @@
-export const TopCars = () => {
+type TopCarsType={
+	cars:Array<TopCarsArrayType>;
+}
+type TopCarsArrayType ={
+	manufacturer: string;
+	model: string;
+}
+export const TopCars = (props:TopCarsType) => {
 	return(
-		<div>Topcars</div>
+		<div>{props.cars}</div>
 	);
 }

@@ -4,6 +4,7 @@ import {Body} from './01-site/Body';
 import {Header} from "./01-site/Header";
 import {Footer} from "./01-site/Footer";
 import {NewComponent} from "./02-map/NewComponent";
+import {TopCars} from "./02-map/TopCars";
 
 
 function App() {

@@ -16,10 +16,10 @@ export const TopCars = (props: TopCarsType) => {
 			</tr>
 			{props.cars.map((el, index) => {
 				return (
-					<tr>
-						<td key={index+1}>{index+1}</td>
-						<td key={index+1}>{el.manufacturer}</td>
-						<td key={index+1}>{el.model}</td>
+					<tr key={index}>
+						<td>{index+1}</td>
+						<td>{el.manufacturer}</td>
+						<td>{el.model}</td>
 					</tr>
 				);
 			})}

@@ -20,17 +20,17 @@ function App() {
 		{id: 10, name: "Charles", age: 98},
 		{id: 11, name: "Christopher", age: 100},
 	]
-	const topCars = [
-		{manufacturer:"BMW",model:'m5cs'},
-		{manufacturer:"Mercedes",model:'e63s'},
-		{manufacturer:"Audi",model:'rs6'}
-	]
+	// const topCars = [
+	// 	{manufacturer:"BMW",model:'m5cs'},
+	// 	{manufacturer:"Mercedes",model:'e63s'},
+	// 	{manufacturer:"Audi",model:'rs6'}
+	// ]
 	return (
 		<>
 			<Header title={"Header"}/>
 			<Body title={"Body"}/>
 			<Footer title={"Footer"}/>
-			<NewComponent/>
+			<NewComponent students={students}/>
 		</>
 	);
 }

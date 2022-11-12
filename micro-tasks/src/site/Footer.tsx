@@ -1,5 +1,8 @@
-export const Footer = () => {
+type FooterType = {
+	title: string;
+}
+export const Footer = (props: FooterType) => {
 	return (
-		<div>Footer</div>
+		<div>{props.title}</div>
 	);
 }

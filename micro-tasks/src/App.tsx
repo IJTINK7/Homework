@@ -56,7 +56,7 @@ function App() {
 		console.log(info)
 	}
 	//filter
-	const money = [
+	let money = [
 		{banknote: 'dollar', nominal: 100, number: ' a1234567890'},
 		{banknote: 'dollar', nominal: 50, number: ' z1234567890'},
 		{banknote: 'ruble', nominal: 100, number: ' w1234567890'},
@@ -66,6 +66,9 @@ function App() {
 		{banknote: 'dollar', nominal: 50, number: ' x1234567890'},
 		{banknote: 'ruble', nominal: 50, number: ' v1234567890'},
 	];
+	let currentMoney = money.filter((filteredMoney)=>{return filteredMoney.banknote === "ruble"})
+
+	console.log(currentMoney)
 
 	return (
 		<>

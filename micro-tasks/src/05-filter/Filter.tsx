@@ -9,7 +9,7 @@ type MoneyTypeArray={
 export const Filter =(props:FilterType)=>{
 	return(
 		<ul>
-			{props.money.map((objFromMoneyArr, index) => {
+			{props.money.filter((filteredMoney)=>{return filteredMoney.banknote === "ruble"}).map((objFromMoneyArr, index) => {
 				return (
 					<li key={index}>
 						<span> {objFromMoneyArr.banknote}</span>

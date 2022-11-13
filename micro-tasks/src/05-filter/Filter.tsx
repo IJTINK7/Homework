@@ -7,9 +7,11 @@ type MoneyTypeArray = {
 	number: string;
 }
 export const Filter = (props: FilterType) => {
+
 	const onclickFilterHandler =(nameButton:string)=>{
 		console.log(nameButton)
 	}
+
 	return (
 		<>
 		<ul>

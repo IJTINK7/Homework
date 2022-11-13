@@ -5,6 +5,7 @@ import {Header} from "./01-site/Header";
 import {Footer} from "./01-site/Footer";
 import {NewComponent} from "./02-map/NewComponent";
 import {TopCars} from "./02-map/TopCars";
+import {Button} from "./03-button/Button";
 
 
 function App() {
@@ -42,8 +43,8 @@ function App() {
 			<TopCars cars={topCars}/>
 			<button onClick={foo1}>1</button>
 			<button onClick={()=>{foo2(777)}}>2</button>
+			<Button />
 		</>
 	);
 }
-
 export default App;

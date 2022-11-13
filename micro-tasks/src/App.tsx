@@ -6,7 +6,7 @@ import {Footer} from "./01-site/Footer";
 import {NewComponent} from "./02-map/NewComponent";
 import {TopCars} from "./02-map/TopCars";
 import {Button} from "./03-button/Button";
-
+import {Filter} from "./05-filter/Filter";
 
 function App() {
 	//useState
@@ -76,7 +76,7 @@ function App() {
 			<h1>{a}</h1>;
 			<button onClick={onclickHandler}>+1</button>
 			<button onClick={onclickZero}>0</button>
-
+			<Filter/>
 		</>
 	);
 }

@@ -7,13 +7,7 @@ type MoneyTypeArray = {
 	number: string;
 }
 export const Filter = (props: FilterType) => {
-	const onclickFilterHandlerAll =(nameButton:string)=>{
-		console.log(nameButton)
-	}
-	const onclickFilterHandlerDollar =(nameButton:string)=>{
-		console.log(nameButton)
-	}
-	const onclickFilterHandlerRuble =(nameButton:string)=>{
+	const onclickFilterHandler =(nameButton:string)=>{
 		console.log(nameButton)
 	}
 	return (
@@ -32,9 +26,9 @@ export const Filter = (props: FilterType) => {
 				})}
 			</ul>
 			<div style={{marginLeft:"15px"}}>
-				<button onClick={()=>onclickFilterHandlerAll('All')}>All</button>
-				<button onClick={()=>onclickFilterHandlerDollar('Dollar')}>Dollar</button>
-				<button onClick={()=>onclickFilterHandlerRuble('Ruble')}>Ruble</button>
+				<button onClick={()=>onclickFilterHandler('All')}>All</button>
+				<button onClick={()=>onclickFilterHandler('Dollar')}>Dollar</button>
+				<button onClick={()=>onclickFilterHandler('Ruble')}>Ruble</button>
 			</div>
 		</>
 

@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 type FilterType = {
 	money: Array<MoneyTypeArray>;
 }
@@ -8,16 +10,19 @@ type MoneyTypeArray = {
 }
 export const Filter = (props: FilterType) => {
 
+	let[currency, setCurrency] = useState('all')
 	const onclickFilterHandler =(nameButton:string)=>{
-		console.log(nameButton)
+		setCurrency(nameButton)
 	}
 
 	return (
 		<>
 		<ul>
 			{props.money.filter((filteredMoney) => {
-				return filteredMoney.banknote === "ruble"
-			}).map((objFromMoneyArr, index) => {
+				if(currency === "all"){
+					return props.money
+				}else
+				 return filteredMoney.banknote === currency}).map((objFromMoneyArr, index) => {
 				return (
 					<li key={index}>
 						<span> {objFromMoneyArr.banknote}</span>
@@ -28,9 +33,9 @@ export const Filter = (props: FilterType) => {
 			})}
 		</ul>
 		<div style={{marginLeft:"15px"}}>
-			<button onClick={()=>onclickFilterHandler('All')}>All</button>
-			<button onClick={()=>onclickFilterHandler('Dollar')}>Dollar</button>
-			<button onClick={()=>onclickFilterHandler('Ruble')}>Ruble</button>
+			<button onClick={()=>onclickFilterHandler('all')}>All</button>
+			<button onClick={()=>onclickFilterHandler('dollar')}>Dollar</button>
+			<button onClick={()=>onclickFilterHandler('ruble')}>Ruble</button>
 		</div>
 </>
 

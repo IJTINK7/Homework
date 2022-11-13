@@ -1,23 +1,36 @@
-type FilterType={
+type FilterType = {
 	money: Array<MoneyTypeArray>;
 }
-type MoneyTypeArray={
+type MoneyTypeArray = {
 	banknote: string;
 	nominal: number;
 	number: string;
 }
-export const Filter =(props:FilterType)=>{
-	return(
-		<ul>
-			{props.money.filter((filteredMoney)=>{return filteredMoney.banknote === "ruble"}).map((objFromMoneyArr, index) => {
-				return (
-					<li key={index}>
-						<span> {objFromMoneyArr.banknote}</span>
-						<span> {objFromMoneyArr.nominal}</span>
-						<span> {objFromMoneyArr.number}</span>
-					</li>
-				)
-			})}
-		</ul>
+export const Filter = (props: FilterType) => {
+	const onclickFilterHandler =()=>{
+
+	}
+	return (
+		<>
+			<ul>
+				{props.money.filter((filteredMoney) => {
+					return filteredMoney.banknote === "ruble"
+				}).map((objFromMoneyArr, index) => {
+					return (
+						<li key={index}>
+							<span> {objFromMoneyArr.banknote}</span>
+							<span> {objFromMoneyArr.nominal}</span>
+							<span> {objFromMoneyArr.number}</span>
+						</li>
+					)
+				})}
+			</ul>
+			<div style={{marginLeft:"15px"}}>
+				<button onClick={onclickFilterHandler}>All</button>
+				<button onClick={onclickFilterHandler}>Dollar</button>
+				<button onClick={onclickFilterHandler}>Ruble</button>
+			</div>
+		</>
+
 	);
 }

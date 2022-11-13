@@ -39,7 +39,9 @@ function App() {
 	const button2foo =(name:string, age:number, address: string)=>{
 		console.log(name, age, address);
 	}
-
+	const usualButton =(info:string)=>{
+		console.log(info)
+	}
 	return (
 		<>
 			<Header title={"Header"}/>
@@ -51,6 +53,7 @@ function App() {
 			<button onClick={()=>{foo2(777)}}>2</button>
 			<Button value={"A"} callBack={()=>button1foo("Anna", 22)}/>
 			<Button value={"B"} callBack={()=>{button2foo("Boris", 33, 'live in Minsk')}}/>
+			<Button value={"Usual"} callBack={()=>{usualButton("I am the usual button")}}/>
 		</>
 	);
 }

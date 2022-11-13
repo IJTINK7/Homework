@@ -33,11 +33,11 @@ function App() {
 	const foo2 =(number: number)=>{
 		console.log(number)
 	}
-	const button1foo =(name:string)=>{
-		console.log(name);
+	const button1foo =(name:string, age:number)=>{
+		console.log(name, age);
 	}
-	const button2foo =(name:string)=>{
-		console.log(name);
+	const button2foo =(name:string, age:number)=>{
+		console.log(name, age);
 	}
 
 	return (
@@ -49,8 +49,8 @@ function App() {
 			<TopCars cars={topCars}/>
 			<button onClick={foo1}>1</button>
 			<button onClick={()=>{foo2(777)}}>2</button>
-			<Button value={"A"} callBack={()=>button1foo("A")}/>
-			<Button value={"B"} callBack={()=>{button2foo("B")}}/>
+			<Button value={"A"} callBack={()=>button1foo("Anna", 22)}/>
+			<Button value={"B"} callBack={()=>{button2foo("Boris", 33)}}/>
 		</>
 	);
 }

@@ -33,11 +33,11 @@ function App() {
 	const foo2 =(number: number)=>{
 		console.log(number)
 	}
-	const button1foo =()=>{
-		console.log("Button A");
+	const button1foo =(name:string)=>{
+		console.log(name);
 	}
-	const button2foo =()=>{
-		console.log("Button B");
+	const button2foo =(name:string)=>{
+		console.log(name);
 	}
 
 	return (
@@ -49,8 +49,8 @@ function App() {
 			<TopCars cars={topCars}/>
 			<button onClick={foo1}>1</button>
 			<button onClick={()=>{foo2(777)}}>2</button>
-			<Button value={"A"} callBack={button1foo}/>
-			<Button value={"B"} callBack={button2foo}/>
+			<Button value={"A"} callBack={()=>button1foo("A")}/>
+			<Button value={"B"} callBack={()=>{button2foo("B")}}/>
 		</>
 	);
 }

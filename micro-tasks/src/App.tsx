@@ -27,7 +27,7 @@ function App() {
 		{manufacturer:"Audi",model:'rs6'}
 	]
 	const foo1 =()=>{
-		console.log("Button 1 was clicked")
+		console.log(777)
 	}
 	const foo2 =(number: number)=>{
 		console.log(number)
@@ -40,8 +40,8 @@ function App() {
 			<Footer title={"Footer"}/>
 			<NewComponent students={students}/>
 			<TopCars cars={topCars}/>
-			<button onClick={()=>{foo1()}}>1</button>
-			<button onClick={()=>{foo2(100200)}}>2</button>
+			<button onClick={foo1}>1</button>
+			<button onClick={()=>{foo2(777)}}>2</button>
 		</>
 	);
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Body} from './01-site/Body';
 import {Header} from "./01-site/Header";
@@ -9,6 +9,16 @@ import {Button} from "./03-button/Button";
 
 
 function App() {
+	//useState
+	let [a, setA] = useState(23);
+	const onclickHandler = () => {
+		setA(++a);
+		console.log(a)
+	}
+	const onclickZero = () => {
+		setA(0)
+		console.log(a)
+	}
 	const students = [
 		{id: 1, name: "James", age: 8},
 		{id: 2, name: "Robert", age: 18},
@@ -23,26 +33,26 @@ function App() {
 		{id: 11, name: "Christopher", age: 100},
 	]
 	const topCars = [
-		{manufacturer:"BMW",model:'m5cs'},
-		{manufacturer:"Mercedes",model:'e63s'},
-		{manufacturer:"Audi",model:'rs6'}
+		{manufacturer: "BMW", model: 'm5cs'},
+		{manufacturer: "Mercedes", model: 'e63s'},
+		{manufacturer: "Audi", model: 'rs6'}
 	]
-	const foo1 =()=>{
+	const foo1 = () => {
 		console.log(777)
 	}
-	const foo2 =(number: number)=>{
+	const foo2 = (number: number) => {
 		console.log(number)
 	}
-	const button1foo =(name:string, age:number)=>{
+	const button1foo = (name: string, age: number) => {
 		console.log(name, age);
 	}
-	const button2foo =(name:string, age:number, address: string)=>{
+	const button2foo = (name: string, age: number, address: string) => {
 		console.log(name, age, address);
 	}
-	const usualButton1 =()=>{
+	const usualButton1 = () => {
 		console.log("I'm the usual button 1")
 	}
-	const usualButton2 =(info:string)=>{
+	const usualButton2 = (info: string) => {
 		console.log(info)
 	}
 	return (
@@ -53,11 +63,20 @@ function App() {
 			<NewComponent students={students}/>
 			<TopCars cars={topCars}/>
 			<button onClick={foo1}>1</button>
-			<button onClick={()=>{foo2(777)}}>2</button>
-			<Button value={"A"} callBack={()=>button1foo("Anna", 22)}/>
-			<Button value={"B"} callBack={()=>{button2foo("Boris", 33, 'live in Minsk')}}/>
+			<button onClick={() => {
+				foo2(777)
+			}}>2
+			</button>
+			<Button value={"A"} callBack={() => button1foo("Anna", 22)}/>
+			<Button value={"B"} callBack={() => {
+				button2foo("Boris", 33, 'live in Minsk')
+			}}/>
 			<Button value={"Usual1"} callBack={usualButton1}/>
-			<Button value={"Usual2"} callBack={()=>{usualButton2("I am the usual button 2")}}/>
+			<Button value={"Usual2"} callBack={() => {usualButton2("I am the usual button 2")}}/>
+			<h1>{a}</h1>;
+			<button onClick={onclickHandler}>+1</button>
+			<button onClick={onclickZero}>0</button>
+
 		</>
 	);
 }

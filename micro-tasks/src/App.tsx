@@ -43,7 +43,8 @@ function App() {
 			<TopCars cars={topCars}/>
 			<button onClick={foo1}>1</button>
 			<button onClick={()=>{foo2(777)}}>2</button>
-			<Button />
+			<Button value={"A"} callBack={()=>{}}/>
+			<Button value={"B"} callBack={()=>{}}/>
 		</>
 	);
 }

@@ -1,6 +1,13 @@
 import React from "react";
-export const Button =()=>{
+type ButtonType={
+	value:string;
+	callBack: ()=>void;
+}
+export const Button =(props:ButtonType)=>{
+	const onClickHandler =()=>{
+		props.callBack();
+	}
 	return(
-		<button>3</button>
+		<button onClick={onClickHandler}>{props.value}</button>
 	);
 }

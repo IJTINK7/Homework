@@ -39,7 +39,10 @@ function App() {
 	const button2foo =(name:string, age:number, address: string)=>{
 		console.log(name, age, address);
 	}
-	const usualButton =(info:string)=>{
+	const usualButton1 =()=>{
+		console.log("I'm the usual button 1")
+	}
+	const usualButton2 =(info:string)=>{
 		console.log(info)
 	}
 	return (
@@ -53,7 +56,8 @@ function App() {
 			<button onClick={()=>{foo2(777)}}>2</button>
 			<Button value={"A"} callBack={()=>button1foo("Anna", 22)}/>
 			<Button value={"B"} callBack={()=>{button2foo("Boris", 33, 'live in Minsk')}}/>
-			<Button value={"Usual"} callBack={()=>{usualButton("I am the usual button")}}/>
+			<Button value={"Usual1"} callBack={usualButton1}/>
+			<Button value={"Usual2"} callBack={()=>{usualButton2("I am the usual button 2")}}/>
 		</>
 	);
 }

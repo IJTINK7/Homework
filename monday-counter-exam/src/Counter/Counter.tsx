@@ -19,20 +19,20 @@ export const Counter = () => {
 		setDisableResetButtonStatus(true);
 		setDisableIncreaseButtonStatus(false);
 	}
-	const display = initialNumber === 5 ? "RedDisplayValue": "";
+	const display = initialNumber === 5 ? "RedDisplayValue" : "";
 	return (
 		<div className={"Container"}>
 			<div className={`${display} Display`}>{initialNumber}</div>
 			<div className={"ButtonsContainer"}>
 				<button
-						className={"IncreaseButton"}
-						onClick={() => {increaseNumberHandler(initialNumber)}}
-						disabled={disableIncreaseButtonStatus}>inc
+					className={"IncreaseButton"}
+					onClick={() => {increaseNumberHandler(initialNumber)}}
+					disabled={disableIncreaseButtonStatus}>inc
 				</button>
 				<button
-						className={"ResetButton"}
-						onClick={resetDisplayHandler}
-						disabled={disableResetButtonStatus}>reset
+					className={"ResetButton"}
+					onClick={resetDisplayHandler}
+					disabled={disableResetButtonStatus}>reset
 				</button>
 			</div>
 		</div>

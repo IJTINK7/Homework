@@ -26,7 +26,9 @@ export const Counter = () => {
 			<div className={"ButtonsContainer"}>
 				<button
 					className={"IncreaseButton"}
-					onClick={() => {increaseNumberHandler(initialNumber)}}
+					onClick={() => {
+						increaseNumberHandler(initialNumber)
+					}}
 					disabled={disableIncreaseButtonStatus}>inc
 				</button>
 				<button

@@ -10,7 +10,7 @@ export const Counter = () => {
 		if (displayNumber === 1) {
 			setDisableResetButtonStatus(false);
 		}
-		if (displayNumber === 5) {
+		if (displayNumber === 10) {
 			setDisableIncreaseButtonStatus(true);
 		}
 	}
@@ -19,7 +19,7 @@ export const Counter = () => {
 		setDisableResetButtonStatus(true);
 		setDisableIncreaseButtonStatus(false);
 	}
-	const display = initialNumber === 5 ? "RedDisplayValue" : "";
+	const display = initialNumber === 10 ? "RedDisplayValue" : "";
 	return (
 		<div className={"Container"}>
 			<div className={`${display} Display`}>{initialNumber}</div>

@@ -36,3 +36,15 @@ button{
     font-weight: 700;
     color: #2b2b35;
 }
+.IncreaseButton:active, .ResetButton:active{
+    background-color: #2b2b35;
+    color:#6ee4fe;
+    border: 3px #2b2b35 solid;
+}
+.IncreaseButton:disabled, .ResetButton:disabled {
+    background-color:  #457685;
+    border: 3px #457685 solid;
+}
+ .RedDisplayValue{
+     color:#e30043;
+ }

@@ -12,7 +12,7 @@
     background-color: #2b2b35;
     margin: 20px auto;
     border-radius: 10px;
-    font-size: 120px;
+    font-size: 14px;
     font-weight: 700;
     color: #6ee4fe ;
     border: 3px #6ee4fe solid;
@@ -28,6 +28,19 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.valuesContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px;
+}
+input{
+    border: 3px #6ee4fe solid;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
 }
 
 button {

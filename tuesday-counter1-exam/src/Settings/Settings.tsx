@@ -2,9 +2,7 @@ import React, {useState} from "react";
 import './Settings.css';
 
 export const Settings = () => {
-	const [initialNumber, setNewNumber] = useState(0);
-	const [disableIncreaseButtonStatus, setDisableIncreaseButtonStatus] = useState(false)
-
+	const [SetButtonStatus, setSetButtonStatus] = useState(true)
 	return (
 		<div className={"SettingsContainer"}>
 			<div className="SettingsDisplay">
@@ -19,8 +17,8 @@ export const Settings = () => {
 			</div>
 			<div className={"SettingsButtonsContainer"}>
 				<button
-					className={"IncreaseButton"}
-					disabled={disableIncreaseButtonStatus}>set
+					className={"SetButton"}
+					disabled={SetButtonStatus}>set
 				</button>
 			</div>
 		</div>

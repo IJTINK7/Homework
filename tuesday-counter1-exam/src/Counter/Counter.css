@@ -1,0 +1,57 @@
+.Container {
+    width: 400px;
+    height: 330px;
+    background-color: #2b2b35;
+    margin: 50px auto;
+    border: 3px #6ee4fe solid;
+    border-radius: 10px;
+}
+
+.Display {
+    width: 350px;
+    height: 170px;
+    background-color: #6ee4fe;
+    margin: 20px auto;
+    border-radius: 10px;
+    font-size: 120px;
+    font-weight: 700;
+    color: #2b2b35;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ButtonsContainer {
+    width: 350px;
+    height: 90px;
+    margin: 20px auto;
+    border: 3px #6ee4fe solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    background-color: #6ee4fe;
+    border: 3px #6ee4fe solid;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #2b2b35;
+}
+
+.IncreaseButton:active, .ResetButton:active {
+    background-color: #2b2b35;
+    color: #6ee4fe;
+    border: 3px #2b2b35 solid;
+}
+
+.IncreaseButton:disabled, .ResetButton:disabled {
+    background-color: #457685;
+    border: 3px #457685 solid;
+}
+
+.RedDisplayValue {
+    color: #e30043;
+}

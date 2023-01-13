@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import './Counter.css';
+import './Settings.css';
 
-export const Counter = () => {
+export const Settings = () => {
 	const [initialNumber, setNewNumber] = useState(0);
 	const [disableIncreaseButtonStatus, setDisableIncreaseButtonStatus] = useState(false)
 	const [disableResetButtonStatus, setDisableResetButtonStatus] = useState(true)
@@ -21,9 +21,9 @@ export const Counter = () => {
 	}
 	const display = initialNumber === 10 ? "RedDisplayValue" : "";
 	return (
-		<div className={"CounterContainer"}>
-			<div className={`${display} CounterDisplay`}>{initialNumber}</div>
-			<div className={"CounterButtonsContainer"}>
+		<div className={"SettingsContainer"}>
+			<div className={`${display} SettingsDisplay`}>{initialNumber}</div>
+			<div className={"SettingsButtonsContainer"}>
 				<button
 					className={"IncreaseButton"}
 					onClick={() => {
